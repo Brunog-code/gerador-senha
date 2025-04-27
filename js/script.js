@@ -181,5 +181,7 @@ window.addEventListener('resize', () => {
     let isMobile = window.innerWidth <= 600;
 
     // Atualiza a imagem do cadeado conforme o tamanho da tela
-    cadeado.src = isMobile ? './imagens/cadeado-p.png' : './imagens/cadeado.png';
+    cadeado.src = isMobile ? '/imagens/cadeado-p.png' : '/imagens/cadeado.png';
 });
+
+
