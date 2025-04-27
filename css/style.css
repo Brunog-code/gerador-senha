@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* variaveis */
+:root{
+    --whiteSmoke: #f7f4f3;
+    --wine: #5b2333;
+}
+
+/* global */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--wine); */
+    background: linear-gradient(to right, black, var(--wine));
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--whiteSmoke);
+    color: var(--wine);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 30px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.664);
+}
+
+.conteudoSenha{
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudoSenha h2{
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.fa-rotate-right{
+    display: none;
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: rgb(7, 204, 7);
+}
+
+.inpDados{
+    margin-bottom: 20px;
+}
+
+.inpDados form{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.qtdeCarac:focus,
+.qtdeCarac:focus::placeholder{
+    background-color: var(--wine);
+    color: var(--whiteSmoke);
+}
+
+.destaque{
+    font-weight: 600;
+}
+
+.inpCheck label{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--wine);
+}
+
+.inpDados{
+    display: flex;
+    flex-direction: column;
+}
+
+.inpCheck{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btnGerarSenha{
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    color: var(--wine);
+    font-size: 1.1em;
+    border: 2px solid var(--wine);
+    background-color: transparent;
+    z-index: 1;
+    transition: color .1s ease 0.1s; /* delay na alteracao da cor*/
+}
+
+.btnGerarSenha:hover{
+    cursor: pointer;
+    color: white;
+} 
+
+.btnGerarSenha::before{
+    content: "";
+    position: absolute;
+    background: var(--wine);
+    height: 100%;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s ease;
+    z-index: -1;   
+}
+
+.btnGerarSenha:hover::before{
+    width: 100%;
+}
+
+.res{
+    display: none;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    position: relative;
+}
+.res label{
+    color: var(--wine);
+    font-weight: 600;
+}
+
+.res input{
+    height: 30px;
+    background-color: var(--wine);
+    color: var(--whiteSmoke);
+}
+
+.fa-copy{
+    position: absolute;
+    right: 30px;
+    color: var(--whiteSmoke);
+}
+
+.fa-copy:hover{
+    cursor: pointer;
+}
+
+.inpSenha{
+    padding-left: 5px;
+}
+
+.animaErro{
+    animation: erro 0.5s ease;
+}
+
+/* Media queries */
+@media screen and (max-width: 600px){
+    .container{
+        flex-direction: column;
+    }
+
+    /* .imgSenha img{
+        content: url('../imagens/cadeado-p.png');
+    } */
+}
+
+/* keyFrame */
+@keyframes erro{
+    25%{
+        translate: 6px 0;
+    }
+
+    40%{
+        translate: -6px 0;
+    }
+
+    65%{
+        translate: 6px 0;
+    }
+
+    80%{
+        translate: -6px 0;
+    }
+}

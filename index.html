@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador senha</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- toastify -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="container">
+
+        <div class="imgSenha">
+                <img src="imagens/cadeado.png" alt="cadeado" id="imgCadeado">  
+        </div>
+
+        <div class="conteudoSenha">
+
+            <i class="fa-solid fa-rotate-right" id="btnRecomecar" onclick="resetar(this)"></i>
+
+            <h2>Gerador de senha</h2>
+            <div class="inpDados">
+                <form action="">
+                    <label for="" class="destaque">Quantidade de catactere</label>
+                    <input type="number" name="" class="qtdeCarac" id="qtdeCarac" placeholder="3 a 15" min="3" max="15">
+                </form>
+            </div>
+
+            <div class="inpCheck">
+                <span class="destaque">Selecione abaixo a composição da senha</span>
+                <label for="numeros">
+                    <input type="checkbox" name="" id="numeros">Numeros
+                </label>
+                <label for="letras">
+                    <input type="checkbox" name="" id="letras">Letras
+                </label>
+                <label for="simbolos">
+                    <input type="checkbox" name="" id="simbolos">Simbolos
+                </label>
+            </div>
+
+            <button onclick="gerarSenha()" id="btnGerarSenha" class="btnGerarSenha">Gerar Senha</button>
+
+            <div id="res" class="res">
+                <label for="">Senha gerada</label>
+                <input type="text" name="" id="inpSenha" class="inpSenha" disabled>
+                <i class="fa-solid fa-copy" id="copiarS" onclick="copiarSenha()"></i>
+            </div>
+
+        </div><!--Fim conteudo senha-->
+
+    </section> <!-- FIM CONTAINER-->
+    
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
