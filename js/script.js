@@ -129,8 +129,8 @@ const piscarCadeadoAcerto = () => {
     let imgCadeado = document.getElementById('imgCadeado')
     let isMobile = window.innerWidth <= 600
 
-    let imagemAcerto = isMobile ? '../imagens/cadeado-green-p.png' : '../imagens/cadeado-green.png';
-    let imagemNormal = isMobile ? '../imagens/cadeado-p.png' : '../imagens/cadeado.png';
+    let imagemAcerto = isMobile ? '/imagens/cadeado-green-p.png' : '/imagens/cadeado-green.png';
+    let imagemNormal = isMobile ? '/imagens/cadeado-p.png' : '/imagens/cadeado.png';
 
     imgCadeado.src = imagemAcerto;
 
@@ -158,8 +158,8 @@ const animarCadeadoErro = () => {
     let isMobile = window.innerWidth <= 600;
 
     // Define as imagens corretas
-    let imagemErro = isMobile ? '../imagens/cadeado-red-p.png' : '../imagens/cadeado-red.png';
-    let imagemNormal = isMobile ? '../imagens/cadeado-p.png' : '../imagens/cadeado.png';
+    let imagemErro = isMobile ? '/imagens/cadeado-red-p.png' : '/imagens/cadeado-red.png';
+    let imagemNormal = isMobile ? '/imagens/cadeado-p.png' : '/imagens/cadeado.png';
 
     cadeado.src = imagemErro;
 
@@ -181,5 +181,5 @@ window.addEventListener('resize', () => {
     let isMobile = window.innerWidth <= 600;
 
     // Atualiza a imagem do cadeado conforme o tamanho da tela
-    cadeado.src = isMobile ? '../imagens/cadeado-p.png' : '../imagens/cadeado.png';
+    cadeado.src = isMobile ? '/imagens/cadeado-p.png' : '/imagens/cadeado.png';
 });
