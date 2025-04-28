@@ -1,22 +1,3 @@
-// ouve o redimensionamento da tela para carregar a img correta
-window.addEventListener('resize', () => {
-    const cadeado = document.getElementById('imgCadeado');
-    
-    let isMobile = window.innerWidth <= 600;
-
-    // Atualiza a imagem do cadeado conforme o tamanho da tela
-    cadeado.src = isMobile ? './imagens/cadeado-p.png' : './imagens/cadeado.png';
-});
-
-// ouve o carregamento da tela para carregar a img correta quando for <= 600
-window.addEventListener('DOMContentLoaded', () => {
-    const cadeado = document.getElementById('imgCadeado');
-    let isMobile = window.innerWidth <= 600;
-    cadeado.src = isMobile ? './imagens/cadeado-p.png' : './imagens/cadeado.png';
-})
-    
- 
-
 const gerarSenha = () => {
     // atribuição das variaveis
     let qtdeSenha = parseInt(document.getElementById('qtdeCarac').value)
@@ -192,6 +173,21 @@ const animarCadeadoErro = () => {
         cadeado.removeEventListener('animationend', removerAnimacao);
     });
 }
+
+// ouve o redimensionamento da tela para carregar a img correta
+window.addEventListener('resize', () => {
+    const cadeado = document.getElementById('imgCadeado');
+    let isMobile = window.innerWidth <= 600;
+    cadeado.src = isMobile ? './imagens/cadeado-p.png' : './imagens/cadeado.png';
+});
+
+// ouve o carregamento da tela para carregar a img correta quando for <= 600
+window.addEventListener('DOMContentLoaded', () => {
+    const cadeado = document.getElementById('imgCadeado');
+    let isMobile = window.innerWidth <= 600;
+    cadeado.src = isMobile ? './imagens/cadeado-p.png' : './imagens/cadeado.png';
+})
+    
 
 
 
