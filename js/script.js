@@ -71,7 +71,6 @@ const gerarSenha = () => {
     let recomecar = document.getElementById('btnRecomecar').style.display = 'flex'
 }
 
-
 const copiarSenha = () => {
     let senhaGerada = document.getElementById('inpSenha').value
 
